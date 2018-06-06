@@ -1,0 +1,42 @@
+{
+  "name": "vmssimple",
+  "version": "1.0.0",
+  "description": "nodejs and angularjs vehicle management system simplified",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blejzer/vmssimple.git"
+  },
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "vehicle",
+    "management",
+    "system"
+  ],
+  "author": "Nikola Kujaca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Blejzer/vmssimple/issues"
+  },
+  "homepage": "https://github.com/Blejzer/vmssimple#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
+    "angular": "^1.7.0",
+    "angular-spinners": "^5.0.5",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "config-js": "^1.1.9",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "npm": "^6.1.0",
+    "popper.js": "^1.14.3"
+  }
+}
