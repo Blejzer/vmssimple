@@ -1,0 +1,22 @@
+<!-- partial-home.html -->
+
+<div  class="jumbotron text-center">
+    <div ng-controller="VmsController">
+        <table ng-show="vehiclesAll" class="table">
+            <tr ng-repeat="x in vehiclesAll track by $index">
+                <td>
+                    {{x.vin}}
+                </td>
+                <td>
+                    {{x.licenseplate}}
+                </td>
+                <td>
+                    {{x.make}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+

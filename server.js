@@ -47,7 +47,7 @@ console.log("*********************************************\nserver version "+ver
  * encoded urls                     *
  ************************************/
 app.use('/scripts', express['static']('./node_modules/'));
-app.use('/angular', express['static']('./angular/'));
+app.use('/angular', express['static']('./frontend/angular/'));
 app.use('/images', express['static']('./views/images/'));
 app.use('/views', express['static']('./views/'));
 app.use(bodyParser.json()); // for parsing application/json
@@ -76,6 +76,25 @@ app.get('/', function (req, res) {
 
 
 
+/* **************************************
+ *      API GET getAllVehicles          *
+ *      =======================         *
+ *   get the list of all vehicles       *
+ *     from the vehicle table           *
+ ************************************** */
+app.get('/api/vehicles/get', function (req, res) {
+    console.log('API GET getAllVehicles');
+    getAllVehicles(function (rezultatc) {
+        // console.log("DATA: getAvailableVehicles: end of getAvailableVehicles - result: ", rezultatc);
+
+        res.send(rezultatc);
+
+    });
+});
+
+
+
+
 /****************************************************************************
  *                                                                          *
  *                          SERVING PAGES END                               *
@@ -93,17 +112,13 @@ testDataBaseConnection(function (test) {
     }
 });
 
-/* *****************************************************************
- *                  Palimo server na portu 80.                     *
- * *****************************************************************/
-
 /* ***********************************
  *      Palimo server na portu 80    *
  * ================================  *
  *********************************** */
 app.listen(80, function () {
     console.log(ver, " Initialization sequence complete. ");
-    console.log(new Date(), 'Started listening on port:80');
+    console.log('********************************************* '+ new Date(), ' - vms server started listening on port:80 *********************************************');
 });
 
 
@@ -137,4 +152,38 @@ function testDataBaseConnection(callback) {
     });
 
 
+}
+
+
+
+/* **********************************************
+ *    LIST OF ALL VEHICLES  function       *
+ * Getting the list of all available             *
+ * vehicles in the database from                 *
+ * the mileage.vehicle table (checked=0)         *
+ *************************************************/
+function getAllVehicles(callback) {
+    results = [];
+    // console.log("DATA: getAvailableVehicles: Response from client: "); // ipJson.country.names.en,
+
+    dbcon.getConnection(function (err, connection) {
+
+        connection.query(config.get('vhl.slt'), function (err, crows) { // changed to get all vehicles in stead to assigned.
+            if (err) {
+                if (err.fatal) {
+                    throw err;
+                }
+                console.error("Processor: getAllVehicles: List of vehicles", new Date(), config.get('poruke.konNaBazu'), err.code, err.fatal);
+            }
+            results = crows;
+            // console.log('getAvailableVehicles', results);
+
+            ritrn = JSON.stringify(results);
+            // console.log('getAvailableVehicles stringified: ', ritrn);
+            callback(ritrn);
+
+        });
+
+        connection.release();
+    });
 }

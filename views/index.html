@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VMS</title>
+    <meta name="fragment" content="!">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="ICITAP Vehicle usage">
+    <meta name="author" content="Nikola Kujaca - www.bdslab.info">
+    <!-- Bootstrap Core CSS -->
+    <link href="/scripts/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="/views/styles/customization.css" rel="stylesheet">-->
+</head>
+<body ng-app="vmssimple" >
+<!-- NAVIGATION -->
+    <div>
+        <nav class="navbar" role="navigation" style="display:flex;justify-content:center;align-items:center;">
+            <div class="navbar-header text-center center">
+                <h4>ICITAP vehicle usage</h4>
+                <img src="/images/icitap.png" height="65"/>
+            </div>
+        </nav>
+    </div>
+    <div ui-view="" style="display:flex;justify-content:center;align-items:center;"></div>
+    <div style="display:flex;justify-content:center;align-items:center;">This is the proof that you have landed on the proper page</div>
+
+
+</body>
+
+
+<!-- jQuery -->
+<script src="scripts/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="scripts/angular/angular.js"></script>
+<script src="scripts/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+<!--Main Mileage Module -->
+<script src="/angular/configuration/vmssimple.module.js"></script>
+<!-- Main Mileage router file -->
+<script src="/angular/configuration/vmssimple.router.js"></script>
+
+<script src="/angular/controllers/vmssimple.controller.js"></script>
+
+</html>
