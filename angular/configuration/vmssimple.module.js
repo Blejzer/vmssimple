@@ -14,7 +14,7 @@
      * Look for the included files in their respective folders.
      */
     angular.module('vmssimple', ['ui.router'])
-    alert('You are now secure. Welcome to vmssecure');
+    // alert('You are now secure. Welcome to vmssecure');
 
     // https://github.com/btford/angular-socket-io-seed to get more info on 'btford.socket-io'
     // http://krispo.github.io/angular-nvd3/

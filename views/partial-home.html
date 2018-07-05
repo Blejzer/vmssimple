@@ -1,7 +1,8 @@
 <!-- partial-home.html -->
 
 <div  class="jumbotron text-center">
-    <div ng-controller="VmsController">
+    <div>
+        <img class="spinner" ng-show="loading" src="/images/spinner.svg" />
         <table ng-show="vehiclesAll" class="table">
             <tr ng-repeat="x in vehiclesAll track by $index">
                 <td>
@@ -14,7 +15,45 @@
                     {{x.make}}
                 </td>
             </tr>
+
+            <tr ng-repeat="x in usersAll track by $index">
+                <td>
+                    {{x.id}}
+                </td>
+                <td>
+                    {{x.name}}
+                </td>
+                <td>
+                    {{x.lastname}}
+                </td>
+            </tr>
         </table>
+        <div>
+            <form id="formNewUser" ng-submit="submitNewUser()">
+
+
+            </form>
+
+
+            <table class="table table-condensed">
+                <thead class="thead-dark">
+                <tr>
+                    <th class="text-center text-success">
+                        Previous Mileage
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="x in mileageList track by $index" class="text-center text-success">
+                    <td>{{x.time_id | date : 'MMM d, yy HH:mm'}}
+                    </td>
+                    <td>{{x.name}}</td>
+                    <td>{{x.license_plate}}</td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
     </div>
 
 </div>

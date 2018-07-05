@@ -1,0 +1,10 @@
+<div ng-id="newVehicle">
+    <form id="formNewVehicle" ng-submit="submitNewVehicle()">
+        <input type="hidden" ng-model="vin" id="vin" value="{{ vehicle.vin }}"/>
+        <input ng-model="v" id="v" class="form-control" autocomplete="off" required/>
+        <button class="form-control btn bg-person">
+            <strong>Send</strong>
+        </button>
+
+    </form>
+</div>
