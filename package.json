@@ -25,7 +25,7 @@
   "homepage": "https://github.com/Blejzer/vmssimple#readme",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.18",
-    "angular": "^1.7.0",
+    "angular": "^1.7.9",
     "angular-spinners": "^5.0.5",
     "async": "^2.6.1",
     "body-parser": "^1.18.3",
