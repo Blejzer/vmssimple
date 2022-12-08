@@ -32,7 +32,7 @@
     "bootstrap": "^4.3.1",
     "config-js": "^1.1.9",
     "ejs": "^3.1.7",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jquery": "^3.5.0",
     "lodash": "^4.17.21",
     "method-override": "^2.3.10",
