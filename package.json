@@ -28,7 +28,7 @@
     "angular": "^1.8.3",
     "angular-spinners": "^5.0.5",
     "async": "^2.6.4",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "bootstrap": "^4.3.1",
     "config-js": "^1.1.15",
     "ejs": "^3.1.7",
