@@ -30,7 +30,7 @@
     "async": "^2.6.4",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
-    "config-js": "^1.1.9",
+    "config-js": "^1.1.15",
     "ejs": "^3.1.7",
     "express": "^4.16.3",
     "jquery": "^3.5.0",
